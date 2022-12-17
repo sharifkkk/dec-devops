@@ -1,2 +1,2 @@
 # dec-devops
-repository for devops practice
+repository for devops practice in dec.
