@@ -1,7 +1,7 @@
 pipeline {
 agent any
 parameters {
-  choice choices: ['master', 'feature-1', 'feature-2'], description: 'enter your choice to select your branch', name: 'branch'
+  choice choices: 'master \n feature-1\n feature-2', description: 'enter your choice to select your branch', name: 'branch'
 }
  
 stages {
