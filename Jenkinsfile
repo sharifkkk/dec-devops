@@ -3,12 +3,17 @@ agent any
 stages {
 stage('build'){
 steps {
-   echo "biuld..."
+   echo "build..."
 }
 }
 stage('test'){
 steps {
    echo "testing..."
+}
+}
+stage('deploy'){
+steps {
+echo "deploying..."
 }
 }
 }
