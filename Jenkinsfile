@@ -1,9 +1,8 @@
 pipeline {
 agent any
 parameters {
-  choice choices: 'master \n feature-1\n feature-2', description: 'enter your choice to select your branch', name: 'branch'
+  string description: 'enter your name', name: 'Name'
 }
- 
 stages {
 stage('build') {
 steps {
