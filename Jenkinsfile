@@ -1,12 +1,10 @@
 pipeline {
 agent any
-parameters{
 properties([parameters([choice(choices: 'main\n feature-1\nfeature-2', description: 'enter the branch name', name: 'branch')]) 
-}
 stages {
 stage('build') {
 steps {
-      echo "welcome to devops course by ${NAME}"
+      echo "welcome to devops ${branch} course by ${NAME}"
 }
 }
 }
