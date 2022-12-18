@@ -1,20 +1,12 @@
+def NAME = "sharif"
 pipeline {
 agent any 
 stages {
-stage('build'){
+stage('build') {
 steps {
-   echo "build..."
-}
-}
-stage('test'){
-steps {
-   echo "testing..."
-}
-}
-stage('deploy'){
-steps {
-echo "deploying..."
+      echo "welcome to devops course by ${NAME}"
 }
 }
 }
+
 }
