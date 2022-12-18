@@ -1,6 +1,9 @@
 pipeline {
 agent any
-properties([parameters([choice(choices: 'main\n feature-1\nfeature-2', description: 'enter the branch name', name: 'branch')]) 
+parameters {
+  choice choices: ['master', 'feature-1', 'feature-2'], description: 'enter your choice to select your branch', name: 'branch'
+}
+ 
 stages {
 stage('build') {
 steps {
