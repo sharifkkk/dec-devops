@@ -1,4 +1,3 @@
-def NAME = "sharif"
 pipeline {
 agent any 
 stages {
