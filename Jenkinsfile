@@ -1,14 +1,13 @@
 pipeline {
-agent any
-parameters {
-  string description: 'enter your name', name: 'Name'
+    agent any 
+    parameters {
+  string defaultValue: 'sharif', description: 'enter your name:', name: 'NAME', trim: true
 }
-stages {
-stage('build') {
-steps {
-      echo "welcome to devops ${branch} course by ${NAME}"
+stages{
+    stage('example'){
+        steps {
+            echo "${NAME}, welcome to the world"
+        }
+    }
 }
-}
-}
-
 }
