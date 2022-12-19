@@ -1,14 +1,16 @@
 pipeline {
-    agent any 
-    parameters {
-  choice choices: 'master\nsharif\njohn', description: 'enter your choice of branch', name: 'branch'
+agent any
+stages {
+stage('stage 1') {
+steps {
+   catchError(buildResult: 'UNSTABLE', message: 'Even if the build fails, we continue on', stageResult: 'UNSTABLE')
+        sh 'exit 1'
 }
-
-stages{
-    stage('example'){
-        steps {
-            echo "${branch}, welcome to the world"
-        }
-    }
+}
+stage('stage 2') {
+steps {
+      echo "welcome to jenkins ${WORKSPACE}"
+}
+}
 }
 }
