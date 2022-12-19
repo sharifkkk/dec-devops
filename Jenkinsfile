@@ -1,10 +1,25 @@
+def call(int build Number){
+if (buildNumber %2 == 0){
 pipeline {
 agent any
 stages {
-stage ('hello'){
+stage('even stage'){
+steps
+{
+echo "the build number is even"
+}
+}
+}
+}
+}
+else {
+pipeline {
+agent any
+stages {
+stage ('odd stage'){
 steps {
-warnError('watch this') {
-     sh 'exit 1'
+echo "the build number is odd"
+}
 }
 }
 }
