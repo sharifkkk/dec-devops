@@ -1,26 +1,10 @@
-def call(int buildnumber){
-if(buildnumber %2 == 0){
+@Library('my-shared-library')_
 pipeline {
 agent any
 stages {
-stage('even stage'){
-steps
-{
-echo "the build number is even"
-}
-}
-}
-}
-}
-else {
-pipeline {
-agent any
-stages {
-stage ('odd stage'){
+stage('hello') {
 steps {
-echo "the build number is odd"
-}
-}
+    evenorodd(currentBuild.getNumber())
 }
 }
 }
