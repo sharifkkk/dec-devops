@@ -1,11 +1,14 @@
-@Library('my-shared-library')_
 pipeline {
 agent any
 stages {
-stage('hello') {
+stage('build'){
 steps {
-    evenorodd(currentBuild.getNumber())
+    sh ' echo "build is successfull"'
 }
 }
+stage('test'){
+steps {
+     sh 'echo "testing done"'
+}}
 }
 }
